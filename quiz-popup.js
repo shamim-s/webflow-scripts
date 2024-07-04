@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
       document.body.style.overflow = "hidden";
     });
 
-  document.querySelector(".close-icon").addEventListener("click", function () {
+  document.querySelector(".close-icon")?.addEventListener("click", function () {
     document.querySelector(".quiz-popup-overly").classList.add("popup-hidden");
     document.body.style.overflow = "auto";
   });
