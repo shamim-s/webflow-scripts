@@ -1,5 +1,5 @@
 (function (w, d, s, o) {
-  var j = d.createElement(s);
+  let j = d.createElement(s);
   j.async = true;
   j.src = "//script.marquiz.io/v2.js";
   j.onload = function () {
