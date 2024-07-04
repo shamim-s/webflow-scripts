@@ -10,9 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "submit",
         function (event) {
           event.preventDefault();
-
           let pdfUrl_link = pdfUrlField.href;
-
           if (pdfUrl) {
             window.location.href = pdfUrl_link;
             console.log(pdfUrl_link, "floor plan link is here");

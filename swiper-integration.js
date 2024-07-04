@@ -1,5 +1,4 @@
 let flag = false;
-
 const developer = new Swiper(".swiper-developers", {
   effect: "slide",
   centeredSlides: flag,
@@ -27,7 +26,6 @@ const developer = new Swiper(".swiper-developers", {
     },
   },
 });
-
 const swiper = new Swiper(".area-swiper", {
   effect: "slide",
   centeredSlides: flag,
@@ -56,7 +54,6 @@ const swiper = new Swiper(".area-swiper", {
     },
   },
 });
-
 // Function to check viewport width
 function checkViewportWidth() {
   if (window.innerWidth <= 640) {

@@ -7,13 +7,11 @@ window.addEventListener("load", () => {
         .classList.remove("popup-hidden");
       document.body.style.overflow = "hidden";
     });
-
   document.querySelector(".close-icon")?.addEventListener("click", function () {
     document.querySelector(".quiz-popup-overly").classList.add("popup-hidden");
     document.body.style.overflow = "auto";
   });
 });
-
 document.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.has("showPopup") && urlParams.get("showPopup") === "true") {
