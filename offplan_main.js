@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   let downloadButton = document.querySelector("#download_pdf");
   console.log(downloadButton);
-  downloadButton.addEventListener("click", function () {
+  downloadButton?.addEventListener("click", function () {
     let form = document.querySelector(".interest_form");
     let pdfUrl = document.getElementById("#pdf_Link");
     if (form.checkValidity()) {
@@ -171,10 +171,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 $(document).ready(function () {
   $("input[ms-code-phone-number]").each(function () {
-    var input = this;
-    var preferredCountries = $(input).attr("ms-code-phone-number").split(",");
+    let input = this;
+    let preferredCountries = $(input).attr("ms-code-phone-number").split(",");
 
-    var iti = window.intlTelInput(input, {
+    let iti = window.intlTelInput(input, {
       preferredCountries: preferredCountries,
       utilsScript:
         "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
@@ -182,7 +182,7 @@ $(document).ready(function () {
     $.get(
       "https://ipinfo.io",
       function (response) {
-        var countryCode = response.country;
+        let countryCode = response.country;
         iti.setCountry(countryCode);
       },
       "jsonp"
@@ -190,14 +190,14 @@ $(document).ready(function () {
     input.addEventListener("change", formatPhoneNumber);
     input.addEventListener("keyup", formatPhoneNumber);
     function formatPhoneNumber() {
-      var formattedNumber = iti.getNumber(
+      let formattedNumber = iti.getNumber(
         intlTelInputUtils.numberFormat.NATIONAL
       );
       input.value = formattedNumber;
     }
-    var form = $(input).closest("form");
+    let form = $(input).closest("form");
     form.submit(function () {
-      var formattedNumber = iti.getNumber(
+      let formattedNumber = iti.getNumber(
         intlTelInputUtils.numberFormat.INTERNATIONAL
       );
       input.value = formattedNumber;
@@ -205,10 +205,13 @@ $(document).ready(function () {
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
-  let parent = document.querySelector(".floorplan-section");
+  let parent = document?.querySelector(".floorplan-section");
   let nestedCollection = document.querySelector(".floor_plans_list");
-  if (nestedCollection === null) parent.style.display = "none";
-  else parent.style.display = "block";
+  if (nestedCollection === null) {
+    parent.style.display = "none";
+  } else {
+    parent.style.display = "block";
+  }
 });
 let propertySelectField = document.querySelector(".developer-select");
 let inputField = document.querySelector(".developer-filter");
@@ -235,7 +238,7 @@ propertySelectField1?.addEventListener("change", function () {
 document.addEventListener("DOMContentLoaded", function () {
   // Get the original paragraph element
   let original = document.querySelector(".amenities_texts");
-  let words = original.textContent.split(",");
+  let words = original?.textContent.split(",");
   // Create a new ul element
   let newList = document.createElement("ul");
   newList.classList.add("amenities__wrapper");
