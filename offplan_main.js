@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+//
 $(document).ready(function () {
   $("input[ms-code-phone-number]").each(function () {
     let input = this;
