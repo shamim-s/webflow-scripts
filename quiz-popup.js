@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   document
     .querySelector(".quiz-card-btn")
-    .addEventListener("click", function () {
+    ?.addEventListener("click", function () {
       document
         .querySelector(".quiz-popup-overly")
         .classList.remove("popup-hidden");
